@@ -3,13 +3,13 @@
 /* We dont use BEM philosophy for paragraphs (special case) */
 
 	p{
+		font-weight: 300;
 		line-height:1.65;
-		margin: 1.8 0rem;
+		margin: 0 0 1.8 0rem;
 
 		@mixin atSmall {
 			font-size: 1.125rem;
 		}
-
 	}
 
 	p a {
