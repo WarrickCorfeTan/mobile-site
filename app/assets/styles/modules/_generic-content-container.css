@@ -1,0 +1,18 @@
+.generic-content-container {
+
+/* We dont use BEM philosophy for paragraphs (special case) */
+
+	p{
+		line-height:1.65;
+		margin: 1.8 0rem;
+
+		@mixin atSmall {
+			font-size: 1.125rem;
+		}
+
+	}
+
+	p a {
+		font-weight: 700;
+	}
+}
