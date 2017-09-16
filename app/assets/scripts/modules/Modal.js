@@ -1,22 +1,21 @@
 import $ from 'jquery';
 
 class Modal {
-
 	constructor() {
 		this.openModalButton = $(".open-modal");
-		this.modal = $(".modal");
+		this.modal= $(".modal");
 		this.closeModalButton = $(".modal__close");
-		this.events();
+		this.events(); //starts as soon as page loads
 	}
 
 	events() {
-		//clicking the open moda
-		this.openModalButton.click(this.openModal.bind(this));
+		// clicking open modal button
+		this.openModalButton.click(this.openModal.bind(this)); //makes sure this points to the right thing
 
-		//clicking the x closemodal button
+		//clicking the x close modal button
 		this.closeModalButton.click(this.closeModal.bind(this));
 
-		//user pushes any key
+		//pushes escape key
 		$(document).keyup(this.keyPressHandler.bind(this));
 	}
 
@@ -33,6 +32,7 @@ class Modal {
 
 	closeModal() {
 		this.modal.removeClass("modal--is-visible");
+		return false;
 	}
 }
 

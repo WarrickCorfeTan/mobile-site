@@ -11737,19 +11737,19 @@ var Modal = function () {
 		this.openModalButton = (0, _jquery2.default)(".open-modal");
 		this.modal = (0, _jquery2.default)(".modal");
 		this.closeModalButton = (0, _jquery2.default)(".modal__close");
-		this.events();
+		this.events(); //starts as soon as page loads
 	}
 
 	_createClass(Modal, [{
 		key: "events",
 		value: function events() {
-			//clicking the open moda
-			this.openModalButton.click(this.openModal.bind(this));
+			// clicking open modal button
+			this.openModalButton.click(this.openModal.bind(this)); //makes sure this points to the right thing
 
-			//clicking the x closemodal button
+			//clicking the x close modal button
 			this.closeModalButton.click(this.closeModal.bind(this));
 
-			//user pushes any key
+			//pushes escape key
 			(0, _jquery2.default)(document).keyup(this.keyPressHandler.bind(this));
 		}
 	}, {
@@ -11769,6 +11769,7 @@ var Modal = function () {
 		key: "closeModal",
 		value: function closeModal() {
 			this.modal.removeClass("modal--is-visible");
+			return false;
 		}
 	}]);
 
