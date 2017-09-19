@@ -11275,7 +11275,7 @@ var StickyHeader = function () {
 		this.createPageSectionWaypoints();
 		this.addSmoothScrolling();
 		//BUG #waypoints
-		this.refreshWaypoints();
+		//this.refreshWaypoints(); 
 	}
 
 	//BUG #waypoints

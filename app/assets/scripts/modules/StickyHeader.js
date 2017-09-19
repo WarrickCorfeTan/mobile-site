@@ -14,7 +14,7 @@ class StickyHeader {
 		this.createPageSectionWaypoints();
 		this.addSmoothScrolling();
 		//BUG #waypoints
-		this.refreshWaypoints(); 
+		//this.refreshWaypoints(); 
 	}
 
 	//BUG #waypoints
